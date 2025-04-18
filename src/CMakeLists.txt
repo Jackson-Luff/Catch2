@@ -361,6 +361,7 @@ set_target_properties(Catch2 PROPERTIES
                           DEBUG_POSTFIX "d"
                                 VERSION ${PROJECT_VERSION}
                               SOVERSION ${PROJECT_VERSION})
+set_target_properties(Catch2 PROPERTIES FOLDER "Tests/Dependencies")
 
 # require C++14
 target_compile_features(Catch2
@@ -396,6 +397,7 @@ set_target_properties(Catch2WithMain
       SOVERSION ${PROJECT_VERSION}
 )
 set_target_properties(Catch2WithMain PROPERTIES DEBUG_POSTFIX "d")
+set_target_properties(Catch2WithMain PROPERTIES FOLDER "Tests/Dependencies")
 
 if (NOT_SUBPROJECT)
     # create and install an export set for catch target as Catch2::Catch
